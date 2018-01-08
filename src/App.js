@@ -111,6 +111,7 @@ class App extends Component {
         </div>
           <Table 
             list={list}
+            onDismiss={this.onDismiss}
           />
         <div className="interactions">
           <Button onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}>
