@@ -1,9 +1,10 @@
 {
-  "name": "HackerNews",
+  "name": "hackernews",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "react-test-renderer": "^16.2.0"
   },
   "dependencies": {
     "react": "^16.0.0",
