@@ -65,7 +65,7 @@ class App extends Component {
   onDismiss(id) {
     const { searchKey, results } = this.state;
     const { hits, page } = results[searchKey];
-    
+
     function isNotId(item) {
       return item.objectID !== id;
     }
@@ -105,11 +105,11 @@ class App extends Component {
           value={searchTerm}
           onChange={this.onSearchChange}
           onSubmit={this.onSearchSubmit}
-          >   
+          >
           Search
           </Search>
         </div>
-          <Table 
+          <Table
             list={list}
             onDismiss={this.onDismiss}
           />
@@ -125,7 +125,7 @@ class App extends Component {
 
 const Search = ({ value, onChange, children, onSubmit }) =>
   <form onSubmit={onSubmit}>
-    <input 
+    <input
       className="glowing-border"
       type="text"
       value={value}
@@ -138,7 +138,16 @@ const Search = ({ value, onChange, children, onSubmit }) =>
 
 const Table = ({ list, onDismiss }) =>
   <div className="table">
-  { list.map(item => 
+    <div className="table-row">
+      <span style={{ width: '40%', fontWeight: 'bold', fontSize: '17px'}}>
+        Article
+      </span>
+      <span style={{ width: '30%', fontWeight: 'bold', fontSize: '17px'}}>Author</span>
+      <span style={{ width: '10%', fontWeight: 'bold', fontSize: '17px'}}>Comments</span>
+      <span style={{ width: '10%', fontWeight: 'bold', fontSize: '17px'}}>Points</span>
+      <span style={{ width: '10%', fontWeight: 'bold', fontSize: '17px'}}>Action</span>
+    </div>
+  { list.map(item =>
     <div key={item.objectID} className="table-row">
       <span style={{ width: '40%'}}>
         <a href={item.url}>{item.title}</a>
@@ -152,7 +161,7 @@ const Table = ({ list, onDismiss }) =>
         className="button-inline"
         >
         Dismiss
-        </Button> 
+        </Button>
       </span>
     </div>
   )}
