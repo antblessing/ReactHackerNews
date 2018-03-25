@@ -131,7 +131,7 @@ const Search = ({ value, onChange, children, onSubmit }) =>
       value={value}
       onChange={onChange}
     />
-    <button type="submit">
+    <button type="submit" className="mui-btn mui-btn--primary">
       {children}
     </button>
   </form>
