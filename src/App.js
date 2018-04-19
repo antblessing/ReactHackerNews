@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Search from './components/Search';
+import Table from './components/Table';
+import Button from './components/Button';
 import './App.css';
 
 
@@ -109,10 +112,10 @@ class App extends Component {
           Search
           </Search>
         </div>
-          <Table
-            list={list}
-            onDismiss={this.onDismiss}
-          />
+        <Table
+          list={list}
+          onDismiss={this.onDismiss}
+        />
         <div className="interactions">
           <Button onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}>
           More
@@ -122,59 +125,5 @@ class App extends Component {
     );
   }
 }
-
-const Search = ({ value, onChange, children, onSubmit }) =>
-  <form onSubmit={onSubmit}>
-    <input
-      className="glowing-border"
-      type="text"
-      value={value}
-      onChange={onChange}
-    />
-    <button type="submit" className="mui-btn mui-btn--primary">
-      {children}
-    </button>
-  </form>
-
-const Table = ({ list, onDismiss }) =>
-  <div className="table">
-    <div className="table-row">
-      <span style={{ width: '40%', fontWeight: 'bold', fontSize: '17px'}}>
-        Article
-      </span>
-      <span style={{ width: '30%', fontWeight: 'bold', fontSize: '17px'}}>Author</span>
-      <span style={{ width: '10%', fontWeight: 'bold', fontSize: '17px'}}>Comments</span>
-      <span style={{ width: '10%', fontWeight: 'bold', fontSize: '17px'}}>Points</span>
-      <span style={{ width: '10%', fontWeight: 'bold', fontSize: '17px'}}>Action</span>
-    </div>
-  { list.map(item =>
-    <div key={item.objectID} className="table-row">
-      <span style={{ width: '40%'}}>
-        <a href={item.url}>{item.title}</a>
-      </span>
-      <span style={{ width: '30%'}}>{item.author}</span>
-      <span style={{ width: '10%'}}>{item.num_comments}</span>
-      <span style={{ width: '10%'}}>{item.points}</span>
-      <span style={{ width: '10%'}}>
-        <Button
-        onClick={() => onDismiss(item.objectID)}
-        className="button-inline"
-        >
-        Dismiss
-        </Button>
-      </span>
-    </div>
-  )}
-  </div>
-
-const Button = ({ onClick, className = '', children}) =>
-
-  <button
-  onClick={onClick}
-  className={className}
-  type="button"
-  >
-  {children}
-  </button>
 
 export default App;
