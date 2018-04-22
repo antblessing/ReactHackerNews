@@ -16,7 +16,7 @@ const Table = ({ list, onDismiss }) =>
   { list.map(item =>
     <div key={item.objectID} className="table-row">
       <span style={{ width: '40%'}}>
-        <a href={item.url}>{item.title}</a>
+        <a href={item.url} target="_blank">{item.title}</a>
       </span>
       <span style={{ width: '30%'}}>{item.author}</span>
       <span className="small-column-cell">{item.num_comments}</span>

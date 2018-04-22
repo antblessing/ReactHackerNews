@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshots 1`] = `
+<div
+  className="page"
+>
+  <div
+    className="interactions"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        className="glowing-border"
+        onChange={[Function]}
+        type="text"
+        value="redux"
+      />
+      <button
+        className="mui-btn mui-btn--primary"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <div
+    className="table"
+  >
+    <div
+      className="table-row"
+    >
+      <span
+        className="large-column"
+      >
+        Article
+      </span>
+      <span
+        className="medium-column"
+      >
+        Author
+      </span>
+      <span
+        className="small-column"
+      >
+        Comments
+      </span>
+      <span
+        className="small-column"
+      >
+        Points
+      </span>
+      <span
+        className="small-column"
+      >
+        Action
+      </span>
+    </div>
+  </div>
+  <div
+    className="interactions"
+  >
+    <button
+      className=""
+      onClick={[Function]}
+      type="button"
+    >
+      More
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Search snapshots 1`] = `
+<form
+  onSubmit={undefined}
+>
+  <input
+    className="glowing-border"
+    onChange={undefined}
+    type="text"
+    value={undefined}
+  />
+  <button
+    className="mui-btn mui-btn--primary"
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+`;
+
+exports[`Table snapshots 1`] = `
+<div
+  className="table"
+>
+  <div
+    className="table-row"
+  >
+    <span
+      className="large-column"
+    >
+      Article
+    </span>
+    <span
+      className="medium-column"
+    >
+      Author
+    </span>
+    <span
+      className="small-column"
+    >
+      Comments
+    </span>
+    <span
+      className="small-column"
+    >
+      Points
+    </span>
+    <span
+      className="small-column"
+    >
+      Action
+    </span>
+  </div>
+  <div
+    className="table-row"
+  >
+    <span
+      style={
+        Object {
+          "width": "40%",
+        }
+      }
+    >
+      <a
+        href={undefined}
+        target="_blank"
+      >
+        1
+      </a>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "30%",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      className="small-column-cell"
+    >
+      1
+    </span>
+    <span
+      className="small-column-cell"
+    >
+      2
+    </span>
+    <span
+      className="small-column-cell"
+    >
+      <button
+        className="button-inline"
+        onClick={[Function]}
+        type="button"
+      >
+        Dismiss
+      </button>
+    </span>
+  </div>
+  <div
+    className="table-row"
+  >
+    <span
+      style={
+        Object {
+          "width": "40%",
+        }
+      }
+    >
+      <a
+        href={undefined}
+        target="_blank"
+      >
+        2
+      </a>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "30%",
+        }
+      }
+    >
+      2
+    </span>
+    <span
+      className="small-column-cell"
+    >
+      1
+    </span>
+    <span
+      className="small-column-cell"
+    >
+      2
+    </span>
+    <span
+      className="small-column-cell"
+    >
+      <button
+        className="button-inline"
+        onClick={[Function]}
+        type="button"
+      >
+        Dismiss
+      </button>
+    </span>
+  </div>
+</div>
+`;
